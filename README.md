@@ -7,9 +7,9 @@ I will post some information soon.
 - `match = Dotka.match(id)`:
 	- `match.id` returns an `integer`.
 	- `match.players` returns an `array` of `Dotka::Player` instances.
-	- `match.winner` returns either `radiant` or `dire`.
-	- `match.duration` returns the match duration in seconds.
-	- `match.start_time` returns the start time (`UTC`).
+	- `match.winner` returns either `radiant` or `dire` (`string`).
+	- `match.duration` returns the match duration in seconds (`integer`).
+	- `match.start_time` returns the start time in seconds (`integer`, UTC).
 	- `match.lobby` returns an instance of `Dotka::Lobby`.
 	- `match.game_mode` returns an instance of `Dotka::GameMode`.
 	- `match.region` returns an instance of `Dotka::Region`.
@@ -45,6 +45,33 @@ I will post some information soon.
 	- `player.hero_heal` returns an `integer`.
 	- `player.level` returns an `integer`.
 	- *This method will return an instance of `Dotka::Player`.*
+
+- `hero = Dotka.hero(id)`:
+	- `hero.id` returns an `integer`.
+	- `hero.name` returns a `string` (internal hero name).
+	- `hero.localized_name` returns a `string` (localized hero name in English).
+	- *This method will return an instance of `Dotka::Hero`.*
+
+- `item = Dotka.item(id)`:
+	- `item.id` returns an `integer`.
+	- `item.name` returns a `string` (internal item name).
+	- `item.localized_name` returns a `string` (localized item name in English).
+	- *This method will return an instance of `Dotka::Item`.*
+
+- `game_mode = Dotka.game_mode(id)`:
+	- `game_mode.id` returns an `integer`.
+	- `game_mode.localized_name` returns a `string` (localized game mode name in English).
+	- *This method will return an instance of `Dotka::GameMode`.*
+
+- `lobby = Dotka.lobby(id)`:
+	- `lobby.id` returns an `integer`.
+	- `lobby.localized_name` returns a `string` (localized lobby name in English).
+	- *This method will return an instance of `Dotka::Lobby`.*
+
+- `region = Dotka.region(id)`:
+	- `region.id` returns an `integer`.
+	- `region.localized_name` returns a `string` (localized region name in English).
+	- *This method will return an instance of `Dotka::Region`.*
 
 ## License information
 
