@@ -3,7 +3,7 @@ require "json"
 module DotkaM
 	class Storage
 		def get file, conditions = {}
-			rows = JSON.parse File.read("#{Dir.pwd}/data/#{file}.json")
+			rows = JSON.parse File.read("#{__dir__}/../../data/#{file}.json")
 			if not conditions.empty?
 				rows.select! { |row|
 					selected = true
