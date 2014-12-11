@@ -1,4 +1,4 @@
-require_relative "../src/dotka/game_mode"
+require_relative "../lib/dotka/game_mode"
 
 RSpec.describe DotkaM::GameMode do
 

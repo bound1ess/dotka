@@ -1,4 +1,4 @@
-require_relative "../src/dotka/region"
+require_relative "../lib/dotka/region"
 
 RSpec.describe DotkaM::Region do
 

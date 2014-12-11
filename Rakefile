@@ -1,5 +1,5 @@
 task :specs do
-	sh "rspec ./specs/ --color --format=documentation"
+	sh "rspec ./spec/ --color --format=documentation"
 end
 
 task :default => [:specs] do

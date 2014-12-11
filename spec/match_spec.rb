@@ -1,4 +1,4 @@
-require_relative "../src/dotka/match"
+require_relative "../lib/dotka/match"
 
 RSpec.describe DotkaM::Match do
 

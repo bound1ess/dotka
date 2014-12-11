@@ -1,4 +1,4 @@
-require_relative "../src/dotka/player"
+require_relative "../lib/dotka/player"
 
 RSpec.describe DotkaM::Player do
 	

@@ -1,4 +1,4 @@
-require_relative "../src/dotka/lobby"
+require_relative "../lib/dotka/lobby"
 
 RSpec.describe DotkaM::Lobby do
 	

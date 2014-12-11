@@ -1,5 +1,5 @@
-require_relative "../src/dotka"
-require_relative "../src/dotka/match"
+require_relative "../lib/dotka"
+require_relative "../lib/dotka/match"
 require "rest-client"
 
 RSpec.describe Dotka do

@@ -1,4 +1,4 @@
-require_relative "../src/dotka/hero"
+require_relative "../lib/dotka/hero"
 
 RSpec.describe DotkaM::Hero do
 

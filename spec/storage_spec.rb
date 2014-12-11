@@ -1,4 +1,4 @@
-require_relative "../src/dotka/storage"
+require_relative "../lib/dotka/storage"
 
 RSpec.describe DotkaM::Storage do
 
