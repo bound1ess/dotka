@@ -13,12 +13,12 @@ I will post some information soon.
 	- `match.lobby` returns an instance of `DotkaM::Lobby`.
 	- `match.game_mode` returns an instance of `DotkaM::GameMode`.
 	- `match.region` returns an instance of `DotkaM::Region`.
-	- *Where `match` is an instance of `DotkaM::Match`.*
+	- *This method will return an instance of `DotkaM::Match`.*
 
-- `Dotka.matches(conditions)` where `conditions` is an `array` with these keys:
+- `matches = Dotka.matches(conditions)` where `conditions` is an `array` with these keys:
 	- `player_name` as a `string`.
 	- `hero_id` as an `integer`.
-	- `skill_type` as an `integer`: (0, 1, 2) => (Normal, High, Very High).
+	- `skill_type` as an `integer`: (0, 1, 2, 3) => (Any, Normal, High, Very High).
 	- `min_date` as an `integer` (UTC).
 	- `max_date` as an `integer` (UTC).
 	- `account_id` as an `integer` (for example, `70388657`).
