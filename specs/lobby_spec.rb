@@ -10,8 +10,8 @@ RSpec.describe DotkaM::Lobby do
 	end
 
 	it "provides data getters" do
-		expect(@lobby.id).to eq("0")
-		expect(@lobby.name).to eq("Public matchmaking")
+		expect(@lobby.id).to eq(0)
+		expect(@lobby.localized_name).to eq("Public matchmaking")
 	end
 	
 end

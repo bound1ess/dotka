@@ -11,7 +11,7 @@ RSpec.describe DotkaM::Hero do
 	end
 
 	it "provides data getters" do
-		expect(@hero.id).to eq("1")
+		expect(@hero.id).to eq(1)
 		expect(@hero.name).to eq("antimage")
 		expect(@hero.localized_name).to eq("Anti-Mage")
 	end

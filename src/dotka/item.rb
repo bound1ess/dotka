@@ -3,7 +3,7 @@ require_relative "raw"
 module DotkaM
 	class Item < Raw
 		def id
-			@raw["id"]
+			@raw["id"].to_i
 		end
 		def name
 			@raw["name"]

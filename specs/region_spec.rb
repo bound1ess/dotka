@@ -10,8 +10,8 @@ RSpec.describe DotkaM::Region do
 	end
 		
 	it "provides data getters" do
-		expect(@region.id).to eq("111")
-		expect(@region.name).to eq("US West")	
+		expect(@region.id).to eq(111)
+		expect(@region.localized_name).to eq("US West")	
 	end
 	
 end

@@ -10,8 +10,8 @@ RSpec.describe DotkaM::GameMode do
 	end
 
 	it "provides data getters" do
-		expect(@game_mode.id).to eq("1")
-		expect(@game_mode.name).to eq("All Pick")
+		expect(@game_mode.id).to eq(1)
+		expect(@game_mode.localized_name).to eq("All Pick")
 	end
 		
 end
