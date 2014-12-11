@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
 	spec.description = 'Makes interaction with Dota 2 WebAPI easy'
 	spec.authors = ['bound1ess']
 	spec.email = 'bound1ess.dev@gmail.com'
-	spec.files = ['src/dotka.rb']
+	spec.files = ['lib/dotka.rb']
 	spec.license = 'MIT'
 	spec.homepage = 'https://github.com/bound1ess/dotka'
 end
