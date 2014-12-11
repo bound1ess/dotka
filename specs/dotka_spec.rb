@@ -20,6 +20,15 @@ RSpec.describe Dotka do
 		expect(match = @dotka.match(123456789)).to be_instance_of(DotkaM::Match)
 		expect(match.id).to eq(123456789)
 	end
+	
+	it "loads a list of matches" do
+		allow(RestClient).to receive("get") {
+			FakeResponse.new(200, '{"result": {"matches": [{"match_id": 123456789}]}}')
+		}
+		expect(matches = @dotka.matches(987654321)).to be_an(Array)
+		expect(matches.length).to eq(1)
+		expect(matches.first.id).to eq(123456789)
+	end
 
 end
 
