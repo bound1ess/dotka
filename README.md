@@ -33,7 +33,7 @@ puts match.winner.capitalize + " team has won this match."
 puts "It was played on #{match.region.localized_name}."
 ```
 
-I suggest you to read the `docs/todo.md` file to understand what this gem is capable of.
+I suggest you to read the `docs/api.md` file to understand what this gem is capable of.
 
 ## License information
 
