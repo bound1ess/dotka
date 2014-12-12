@@ -24,13 +24,21 @@ require "dotka"
 dotka = Dotka.new
 dotka.set_api_key "Your API key - you can get it here: steamcommunity.com/dev/apikey"
 
-match = dotka.match "Match ID as integer, for example 1077285418"
+match = dotka.match "Match ID as an integer, for example 1077285418"
 
-puts "First Radiant player has #{match.players.first.last_hits} last hits."
-puts "He plays #{match.players.first.hero.localized_name}."
+puts "First Radiant player had #{match.players.first.last_hits} last hits."
+puts "He played #{match.players.first.hero.localized_name}."
 
 puts match.winner.capitalize + " team has won this match."
 puts "It was played on #{match.region.localized_name}."
+
+matches = dotka.matches("Account ID as an integer, for example 70388657", {
+	"matches_requested" => 5, 
+})
+ 
+puts "First match ID fetched: #{matches.first.id}."
+puts "It was played in #{matches.first.lobby.localized_name}."
+puts "And the game mode was #{matches.first.game_mode.localized_name}."
 ```
 
 I suggest you to read the `docs/api.md` file to understand what this gem is capable of.
