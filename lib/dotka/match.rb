@@ -18,7 +18,7 @@ module DotkaM
 			players
 		end
 		def player account_id
-			players.select { |player| player.account_id == account_id }.first
+			players.select { |player| player.account_id == account_id.to_i }.first
 		end
 		def winner
 			(!! @raw["radiant_win"]) ? "radiant" : "dire"

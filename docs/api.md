@@ -10,6 +10,7 @@
 	- `match.id` returns an `integer`.
 	- `match.players` returns an `array` of `DotkaM::Player` instances.
 	- `match.player(account_id)` returns an instance of `DotkaM::Player`.
+		- `account_id` should be an `integer`.
 	- `match.winner` returns either `radiant` or `dire` (`string`).
 	- `match.duration` returns the match duration in seconds (`integer`).
 	- `match.start_time` returns the start time in seconds (`integer`, UTC).
