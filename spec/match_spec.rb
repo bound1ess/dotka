@@ -20,6 +20,7 @@ RSpec.describe DotkaM::Match do
 	it "provides data getters" do
 		expect(@match.id).to eq(123456789)
 		expect(@match.players.first.account_id).to eq(1)
+		expect(@match.player(1).account_id).to eq(1) 
 		expect(@match.winner).to eq("dire")
 		expect(@match.duration).to eq(3600)
 		expect(@match.start_time).to eq(123456789)
