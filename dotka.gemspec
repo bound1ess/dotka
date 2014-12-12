@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
 	spec.name = 'dotka'
-	spec.version = '1.0.4'
+	spec.version = '1.0.5'
 	spec.date = '2014-12-11'
 	spec.summary = 'Dota 2 WebAPI Wrapper'
 	spec.description = 'Makes interaction with Dota 2 WebAPI easy'
