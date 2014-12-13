@@ -9,7 +9,7 @@ RSpec.describe DotkaM::Match do
 			"players" => [
 				{"account_id" => "1"}
 			],		
-			"radiant_win" => false,
+			"radiant_win" => true,
 			"duration" => "3600",
 			"start_time" => "123456789",
 			"lobby_type" => "0",
@@ -22,7 +22,7 @@ RSpec.describe DotkaM::Match do
 		expect(@match.id).to eq(123456789)
 		expect(@match.players.first.account_id).to eq(1)
 		expect(@match.player(1).account_id).to eq(1) 
-		expect(@match.winner).to eq("dire")
+		expect(@match.winner).to eq("radiant")
 		expect(@match.duration).to eq(3600)
 		expect(@match.start_time).to eq(123456789)
 		expect(@match.lobby.localized_name).to eq("Public matchmaking")
@@ -30,12 +30,12 @@ RSpec.describe DotkaM::Match do
 		expect(@match.region.localized_name).to eq("US West")	
 	end
 	
-	it "provides an API limitation workaround for players info" do
+	it "provides an API limitation workaround" do
 		dotka = Dotka.new
 		allow(dotka).to receive("match")
 					.with(123456789)
 					.and_return DotkaM::Match.new({"players" => [{"account_id" => 1234}]})
-		@match.load_player_info dotka
+		@match.load_info dotka
 		expect(@match.players.first.account_id).to eq(1234)
 	end
 

@@ -41,10 +41,9 @@ module DotkaM
 		end
 		
 		# API limitation workaround
-		def load_player_info dotka
+		def load_info dotka
 			raise "Expected an instance of Dotka." unless dotka.is_a? Dotka
-			@raw["players"] = dotka.match(self.id).raw["players"]
-			self
+			@raw = dotka.match(self.id).raw
 		end
 
 	end
