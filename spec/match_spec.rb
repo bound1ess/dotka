@@ -1,4 +1,5 @@
 require_relative "../lib/dotka/match"
+require_relative "../lib/dotka"
 
 RSpec.describe DotkaM::Match do
 
@@ -29,4 +30,13 @@ RSpec.describe DotkaM::Match do
 		expect(@match.region.localized_name).to eq("US West")	
 	end
 	
+	it "provides an API limitation workaround for players info" do
+		dotka = Dotka.new
+		allow(dotka).to receive("match")
+					.with(123456789)
+					.and_return DotkaM::Match.new({"players" => [{"account_id" => 1234}]})
+		@match.load_player_info dotka
+		expect(@match.players.first.account_id).to eq(1234)
+	end
+
 end

@@ -15,6 +15,6 @@ task :push do
 	sh "ls|grep dotka|head -n1|xargs gem push"
 end
 
-task :update => [:build, :push] do
+task :update => [:specs, :build, :push] do
 	puts "Gem updated!"
 end

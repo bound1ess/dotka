@@ -4,6 +4,7 @@ require_relative "lobby"
 require_relative "game_mode"
 require_relative "region"
 require_relative "storage"
+require_relative "../dotka"
 
 module DotkaM
 	class Match < Raw
@@ -38,5 +39,13 @@ module DotkaM
 		def region
 			Region.new Storage.new.get("regions", {"id" => @raw["cluster"]})
 		end
+		
+		# API limitation workaround
+		def load_player_info dotka
+			raise "Expected an instance of Dotka." unless dotka.is_a? Dotka
+			@raw["players"] = dotka.match(self.id).raw["players"]
+			self
+		end
+
 	end
 end

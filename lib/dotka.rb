@@ -36,4 +36,10 @@ class Dotka
 		}	
 		matches
 	end
+
+	# Rather than updating the gemspec every time.
+	def self.version
+		"1.2.0"
+	end
+
 end
