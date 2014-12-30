@@ -13,7 +13,7 @@ Via **Gemfile**:
 ```ruby
 source "https://rubygems.org"
 
-gem "dotka", "~> 1.0.4"
+gem "dotka"
 ```
 
 ## Example of usage
@@ -41,7 +41,8 @@ puts "It was played in #{matches.first.lobby.localized_name}."
 puts "And the game mode was #{matches.first.game_mode.localized_name}."
 ```
 
-I suggest you to read the `docs/api.md` file to understand what this gem is capable of.
+Read [this](https://github.com/bound1ess/dotka/blob/master/docs/api.md) file to 
+to get understanding of what this gem is capable of.
 
 ## License information
 

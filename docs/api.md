@@ -1,6 +1,6 @@
 # API
 
-*Remember that `Dotka` here is not a class, but an instance of it 
+*Remember that `Dotka` here is not the class itself, but an instance of it 
 (static methods are not in use).*
 
 - `Dotka.set_api_key(key)`
